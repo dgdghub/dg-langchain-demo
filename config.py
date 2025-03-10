@@ -19,3 +19,4 @@ class Config:
         os.environ["LANGCHAIN_TRACING_V2"] = os.getenv('LANGCHAIN_TRACING_V2')
         os.environ["LANGCHAIN_PROJECT"] = os.getenv('LANGCHAIN_PROJECT')
         os.environ["LANGCHAIN_API_KEY"] = os.getenv('LANGCHAIN_API_KEY')
+        os.environ["TAVILY_API_KEY"] = os.getenv('TAVILY_API_KEY')
