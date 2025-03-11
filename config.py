@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 class Config:
-    OPENAI_MODEL = os.getenv('OPENAI_MODEL')
+
     def __init__(self):
         # 设置OpenAI的API环境变量
         os.environ['OPENAI_API_BASE'] = os.getenv('OPENAI_API_BASE')
@@ -21,3 +21,10 @@ class Config:
         os.environ["LANGCHAIN_PROJECT"] = os.getenv('LANGCHAIN_PROJECT')
         os.environ["LANGCHAIN_API_KEY"] = os.getenv('LANGCHAIN_API_KEY')
         os.environ["TAVILY_API_KEY"] = os.getenv('TAVILY_API_KEY')
+
+        self.OPENAI_MODEL = os.getenv('OPENAI_MODEL')
+        self.DB_HOST = os.getenv('DB_HOST')
+        self.DB_PORT = os.getenv('DB_PORT')
+        self.DB_USER = os.getenv('DB_USER')
+        self.DB_PASSWORD = os.getenv('DB_PASSWORD')
+        self.DB_NAME = os.getenv('DB_NAME')
