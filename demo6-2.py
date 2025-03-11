@@ -44,7 +44,8 @@ system_message = SystemMessage(content=system_prompt)
 
 agent_sql = chat_agent_executor.create_tool_calling_executor(model_chat, tools, prompt=system_message)
 
-resp = agent_sql.invoke({"messages": [HumanMessage(content="有多少用户")]})
+# resp = agent_sql.invoke({"messages": [HumanMessage(content="有多少用户")]})
+resp = agent_sql.invoke({"messages": [HumanMessage(content="人数最多的部门是?")]})
 result = resp['messages']
 print(len(result))
 print(result)
