@@ -42,7 +42,7 @@ system_prompt = """
 system_message = SystemMessage(content=system_prompt)
 # 创建代理
 
-agent_sql = chat_agent_executor.create_tool_calling_executor(model_chat, tools, system_message)
+agent_sql = chat_agent_executor.create_tool_calling_executor(model_chat, tools, prompt=system_message)
 
 resp = agent_sql.invoke({"messages": [HumanMessage(content="有多少用户")]})
 result = resp['messages']
