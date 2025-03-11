@@ -1,13 +1,15 @@
+# 通过上下文回答问题
 import asyncio
 import os
 
-from chromadb.utils.embedding_functions.openai_embedding_function import OpenAIEmbeddingFunction
 from langchain_chroma import Chroma
 from langchain_core.documents import Document
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnableLambda, RunnablePassthrough
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
+
 from config import Config
+
 # 加载环境变量
 cf = Config()
 os.environ["LANGCHAIN_PROJECT"] = "demo3"  # 设置Langchain项目名称

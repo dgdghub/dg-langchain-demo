@@ -1,3 +1,4 @@
+# 调用fastapi服务
 from langserve import RemoteRunnable
 
 if __name__ == '__main__':

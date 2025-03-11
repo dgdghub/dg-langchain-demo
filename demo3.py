@@ -1,12 +1,14 @@
+# 使用向量数据库增强的语义搜索
 import asyncio
 import os
 
-from chromadb.utils.embedding_functions.openai_embedding_function import OpenAIEmbeddingFunction
 from langchain_chroma import Chroma
 from langchain_core.documents import Document
 from langchain_core.runnables import RunnableLambda
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
+
 from config import Config
+
 # 加载环境变量
 cf = Config()
 

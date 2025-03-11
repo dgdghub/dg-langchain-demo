@@ -1,5 +1,4 @@
-import os  # 导入os模块，用于操作环境变量和文件路径
-
+# 将聊天链添加到FastAPI应用中，创建Web API服务
 from fastapi import FastAPI  # 导入FastAPI，用于创建Web API服务
 from langchain_core.output_parsers import StrOutputParser  # 导入StrOutputParser，用于将模型输出解析为字符串
 from langchain_core.prompts import ChatPromptTemplate  # 导入ChatPromptTemplate，用于创建聊天提示模板
@@ -7,6 +6,7 @@ from langchain_openai import ChatOpenAI  # 导入ChatOpenAI，用于创建OpenAI
 from langserve import add_routes  # 导入add_routes，用于将聊天链添加到FastAPI应用中
 
 from config import Config
+
 cf = Config()
 # 创建模型
 model_llm = ChatOpenAI(model = cf.OPENAI_MODEL)  # 使用OpenAI的GPT-4模型创建聊天模型

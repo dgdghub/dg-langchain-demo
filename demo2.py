@@ -1,3 +1,4 @@
+# 流式聊天demo
 import os
 
 from langchain_core.messages import HumanMessage
