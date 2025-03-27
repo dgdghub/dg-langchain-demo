@@ -12,7 +12,7 @@ from config import Config
 
 # 加载环境变量
 cf = Config()
-os.environ["LANGCHAIN_PROJECT"] = "demo5"  # 设置Langchain项目名称
+os.environ["LANGCHAIN_PROJECT"] = "demo6"  # 设置Langchain项目名称
 
 # 创建聊天机器人
 model_chat = ChatOpenAI(model=cf.OPENAI_MODEL)  # 使用OpenAI的GPT-4模型创建聊天机器人
